@@ -1,4 +1,4 @@
 theme = "archie"
-baseURL = 'intel.dcdcnation.com'
+baseURL = 'https://intel.dcdcnation.com/'
 languageCode = 'en-us'
 title = 'DC2INTEL'
