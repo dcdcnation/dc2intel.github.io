@@ -19,7 +19,7 @@ RemcosRATはリモート管理ツールのとしてBreakingSecurity社から販�
 
 そうした中で、RemcosRATはサイバー犯罪に使用されており、[APT](https://www.paloaltonetworks.jp/company/in-the-news/2018/unit42-gorgon-group-slithering-nation-state-cybercrime)や、バラマキ型メールによる[攻撃](https://www.cc.uec.ac.jp/blogs/news/2021/07/20210708agenttesla-remcosrat.html)、[銀行への攻撃](https://heimdalsecurity.com/blog/remcosrat-malware-is-targeting-african-banks/)など、正規のリモートアクセスツールではなく、脅威アクターが使用しているケースをみることがほとんどです。
 
-そうした中で、匿名を条件にRemcosRAT解析のために実際に購入したとある人物からDC2INTELに情報を提供いただきました。
+クライムウェアをDC2INTELで調査する中、匿名を条件にRemcosRAT解析のために実際に購入したとある人物からDC2INTELに情報を提供いただきました。
 その情報からRemcosRATの力を紐解いていきます。
 
 # 購入方法
@@ -152,7 +152,7 @@ XPEViewerでも `.text` セクションがパックされていることがわ�
 # おわりに
 RemcosRATを購入する、という目を引くタイトルでしたがいかがでしたでしたでしょうか？
 実際に購入から使用方法までとあるリサーチャーから提供いただきましたが、これほどの強力なRATとクリプター、C2インフラを販売しているbreaking security社は脅威アクターに使用されていることを承知で行っていることは明らかです。
-Ciscoによる[記事](https://gblogs.cisco.com/jp/2018/09/talos-picking-apart-remcos/)では同社へのOSINTにより犯罪社が正規の会社の皮を被って商売をしていることを明らかにしています。
+Ciscoによる[記事](https://gblogs.cisco.com/jp/2018/09/talos-picking-apart-remcos/)では同社へのOSINTにより犯罪者が正規の会社の皮を被って商売をしていることを明らかにしています。
 
 くれぐれも興味本位で購入することは避けましょう。
 
