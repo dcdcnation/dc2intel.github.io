@@ -1,27 +1,2 @@
-<!doctype html><html><head><meta name=generator content="Hugo 0.101.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>DC2INTEL | Home</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta property="og:image" content><link rel=alternate type=application/rss+xml href=https://intel.dcdcnation.com/index.xml title=DC2INTEL><meta property="og:title" content="DC2INTEL"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://intel.dcdcnation.com/"><meta name=twitter:card content="summary"><meta name=twitter:title content="DC2INTEL"><meta name=twitter:description content><link href=https://intel.dcdcnation.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://intel.dcdcnation.com/css/main.d1574b43a51792a446cd761d6f9b1c9abb39ed2c36ca6984f74aef729eb9f245.css></head><body><div class=content><header><div class=main><a href=https://intel.dcdcnation.com/>DC2INTEL</a></div><nav></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/phishing_obfus/>フィッシングサイトの難読化</a></h1><time>Aug 2, 2022</time><br><div class=description>はじめに こんにちは。DC2INTELのmorimolymolyです。
-フィッシングサイトは星の数だけあります。
-自動生成されたものから、頑張ってアクターが構築するものまで様々です。
-難読化の動機としては、フィッシングサイトのAVによる検知回避や、そもそもIoCを解析者に取られたくないというものでしょう。
-今回は、MoqHaoの2022/04/15で観測されたフィッシングサイトとDC2INTELで観測し。解析したWebsiteとを事例に難読化の具合を解析していきます。
-MoqHao 最初に解析し報告されたのはmorimolymolyによる記事です。
-コードとしては単純で配列にある文字列の最後の要素をkeyとしてXORしてevalするだけです。
-すると以下のようなコードが現れ、これを実行します。
-alert("APP Storeアカウントは安全異常があるので、再度ログインしてください。"); location.replace('hxxp://yrdlaebbqt.duckdns.org'); このようにしてIoCを簡単には取りづらくしていることがわかると思います。
-フィッシングサイト 最初に報告されたのはOsumi, Yusuke氏によるツイートでした。 ⚠️ #Phishing Alert
-hxxps://sak15072021-guidance[.]azurefd[.]net/
-IP: (Microsoft Azure)
-Brand: さくらインターネット Sakura Internethttps://t.co/JJpXqVuDx3 pic.twitter.com/N946xazRtW
-&mdash; Osumi, Yusuke (@ozuma5119) July 15, 2022 フィッシングサイトのスキャン結果は以下のとおりです。
-https://urlscan.io/result/23969f8c-5a9b-4cc8-8046-5e99eb5fc973/
-このさくらインターネットを装ったフィッシングサイトにも難読化が仕込まれていました。難読化としては以下のとおりです。
-https://gist.github.com/morimolymoly/e038d91cd69459b1f08fa8ddb77a9de5
-非常に強い難読化がされており、おそらくjavascript-obfuscatorによるものだと考えられます。
-これを動的解析すると、以下の結果が得られました。
-難読化処理で隠したかったのはロギングサーバのIoCとそれを送信するコードでしょう。
-ロギングサーバは以下の通りです。
-https://urlscan.io/result/5aa99525-1c94-4faf-be31-b36d6ff8de60/
-shodanでスキャンすると、様々なポートが空いていることが確認できます。
-https://www.shodan.io/host/104.168.243.119
-おわりに フィッシングサイトはバックエンドたるIoCを隠すために難読化を仕込んでいます。 それは次第に巧妙になっており、MoqHaoの使用するものとさくらインターネットをターゲットにしたものでは大きく異なることがわかると思います。
-DC2INTELでは引き続きフィッシングサイトの難読化処理を観測&リサーチしていきたいと思います。&mldr;</div><a class=readmore href=/posts/phishing_obfus/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/hello/>Hello</a></h1><time>Aug 2, 2022</time><br><div class=description>This is a blog of DC2INTEL.
+<!doctype html><html><head><meta name=generator content="Hugo 0.101.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>DC2INTEL | Home</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta property="og:image" content><link rel=alternate type=application/rss+xml href=https://intel.dcdcnation.com/index.xml title=DC2INTEL><meta property="og:title" content="DC2INTEL"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://intel.dcdcnation.com/"><meta name=twitter:card content="summary"><meta name=twitter:title content="DC2INTEL"><meta name=twitter:description content><link href=https://intel.dcdcnation.com/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://intel.dcdcnation.com/css/main.d1574b43a51792a446cd761d6f9b1c9abb39ed2c36ca6984f74aef729eb9f245.css></head><body><div class=content><header><div class=main><a href=https://intel.dcdcnation.com/>DC2INTEL</a></div><nav></nav></header><main class=list><div class=site-description></div><section class=list-item><h1 class=title><a href=/posts/phishing_obfus/>フィッシングサイトの難読化</a></h1><time>Aug 2, 2022</time><br><div class=description><h1 id=はじめに>はじめに</h1><p>こんにちは。DC2INTELの<a href=https://morimolymoly.com>morimolymoly</a>です。<br>フィッシングサイトは星の数だけあります。\</p>&mldr;</div><a class=readmore href=/posts/phishing_obfus/>Read more ⟶</a></section><section class=list-item><h1 class=title><a href=/posts/hello/>Hello</a></h1><time>Aug 2, 2022</time><br><div class=description>This is a blog of DC2INTEL.
 DC2INTEL is a squad of DCDC aiming for ThreatIntel and MalwareAnalysis.&mldr;</div><a class=readmore href=/posts/hello/>Read more ⟶</a></section></main><footer><div style=display:flex></div><div class=footer-info>2022 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer></div></body></html>
