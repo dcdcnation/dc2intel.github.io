@@ -3,6 +3,7 @@ title: "フィッシングサイトの難読化"
 date: 2022-08-02T19:38:18+09:00
 draft: false
 tags: phishing
+author: morimolymoly
 ---
 
 # はじめに
@@ -30,7 +31,7 @@ location.replace('hxxp://yrdlaebbqt.duckdns.org');
 
 # フィッシングサイト
 最初に報告されたのは[Osumi, Yusuke氏](https://twitter.com/ozuma5119)によるツイートでした。
-{{< tweet user="ozuma5119" id="1547945510748966915" >}}
+{{< tweet user="ozuma5119" id=1547945510748966915 >}}
 
 フィッシングサイトのスキャン結果は以下のとおりです。
 
